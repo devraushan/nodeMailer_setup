@@ -3,7 +3,7 @@ const cors = require('cors')
 require("dotenv").config()
 const nodemailer = require('nodemailer')
 const app = express()
-const port = 3000
+const port = process.env.PORT|3000
 
 const transporter = nodemailer.createTransport({
     service: "Gmail",
@@ -37,6 +37,8 @@ function mailSender(userName,password,recipient){
     }
     return transporter.sendMail(mailOptions)
 }
+
+
 
 app.listen(port, () => {
   console.log(`nodemailerProject is listening at http://localhost:${port}`)
