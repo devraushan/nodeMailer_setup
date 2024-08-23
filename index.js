@@ -40,4 +40,4 @@ function mailSender(userName,password,recipient){
 
 app.listen(port, () => {
   console.log(`nodemailerProject is listening at http://localhost:${port}`)
-})\
+})
